@@ -64,7 +64,7 @@ return {
   {
     "echasnovski/mini.animate",
     event = "VeryLazy",
-    enabled = true,
+    enabled = false,
     opts = function(_, opts)
       opts.scroll = {
         enable = false,

@@ -1,6 +1,4 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Default keymaps: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 local discipline = require("kaandesu.discipline")
 discipline.cowboy()
@@ -35,11 +33,12 @@ keymap.set("n", "td", ":tabclose<Return>", opts)
 -- Split Window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
--- Move Window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+
+-- Move Window (using: "christoomey/vim-tmux-navigator")
+keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", { silent = true })
+keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", { silent = true })
+keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { silent = true })
+keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { silent = true })
 
 -- Resize Window
 keymap.set("n", "<C-w><left>", "<C-w><")
@@ -48,7 +47,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<C-J>", function()
   vim.diagnostic.goto_next()
 end, opts)
 
