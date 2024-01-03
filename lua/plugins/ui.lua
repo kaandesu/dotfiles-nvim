@@ -169,4 +169,8 @@ return {
       opts.config.header = vim.split(logo, "\n")
     end,
   },
+
+  {
+    "stevearc/oil.nvim",
+  },
 }

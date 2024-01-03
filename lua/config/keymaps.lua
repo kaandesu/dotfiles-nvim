@@ -46,6 +46,9 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Oil.nvim keymaps
+require("oil").setup({})
+keymap.set("n", "<C-e>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 -- Diagnostics
 keymap.set("n", "<C-J>", function()
   vim.diagnostic.goto_next()
