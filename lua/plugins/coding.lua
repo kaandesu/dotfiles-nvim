@@ -13,6 +13,16 @@ return {
     },
     opts = { snippet_engine = "luasnip" },
   },
+  {
+    "echasnovski/mini.surround",
+    opts = {
+      mappings = {
+        add = "<C-g>a",
+        delete = "<C-g>d",
+        replace = "<C-g>r",
+      },
+    },
+  },
 
   -- Incremental rename
   {

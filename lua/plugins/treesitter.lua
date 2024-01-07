@@ -7,6 +7,10 @@ return {
       ensure_installed = {
         "cpp",
         "css",
+        "lua",
+        "typescript",
+        "c",
+        "html",
         "fish",
         "gitignore",
         "go",

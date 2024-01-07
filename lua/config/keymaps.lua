@@ -14,8 +14,11 @@ keymap.set("n", "-", "<C-x>")
 -- Delete a word backward
 keymap.set("n", "dW", "dB")
 
+-- mini.surround
+-- keymap.set("n", "<C-g>", "gs")
+
 -- Select All
-keymap.set("n", "<C-a>", "ggVG")
+keymap.set("n", "<C-A>", "ggVG")
 
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
@@ -49,6 +52,11 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 -- Oil.nvim keymaps
 require("oil").setup({})
 keymap.set("n", "<C-e>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+
+-- nvim.bqf  (quickfix list)
+keymap.set("n", "<C-c>", "<CMD>copen<CR>", { desc = "Open quickfix list" })
+keymap.set("n", "<C-q>", "<CMD>cclose<CR>", { desc = "Open quickfix list" })
+
 -- Diagnostics
 keymap.set("n", "<C-J>", function()
   vim.diagnostic.goto_next()

@@ -173,4 +173,5 @@ return {
   {
     "stevearc/oil.nvim",
   },
+  { "kevinhwang91/nvim-bqf" },
 }
