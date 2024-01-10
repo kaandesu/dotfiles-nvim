@@ -3,8 +3,40 @@
 local discipline = require("kaandesu.discipline")
 discipline.cowboy()
 
+local harpoon = require("harpoon")
+harpoon:setup({})
+
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+
+-- Harpoon keymaps
+vim.keymap.set("n", "<leader>a", function()
+  harpoon:list():append()
+end, { desc = "Harpoon append" })
+vim.keymap.set("n", "<C-q>", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
+
+vim.keymap.set("n", "<leader>1", function()
+  harpoon:list():select(1)
+end)
+vim.keymap.set("n", "<leader>2", function()
+  harpoon:list():select(2)
+end)
+vim.keymap.set("n", "<leader>3", function()
+  harpoon:list():select(3)
+end)
+vim.keymap.set("n", "<leader>4", function()
+  harpoon:list():select(4)
+end)
+
+-- Toggle previous & next buffers stored within Harpoon list
+vim.keymap.set("n", "<C-p>", function()
+  harpoon:list():prev()
+end)
+vim.keymap.set("n", "<C-n>", function()
+  harpoon:list():next()
+end)
 
 -- Increment / Decrement
 
@@ -53,9 +85,9 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 require("oil").setup({})
 keymap.set("n", "<C-e>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
--- nvim.bqf  (quickfix list)
-keymap.set("n", "<C-c>", "<CMD>copen<CR>", { desc = "Open quickfix list" })
-keymap.set("n", "<C-q>", "<CMD>cclose<CR>", { desc = "Open quickfix list" })
+-- nvim.bqf  (quickfix list) DISABLED since I have harpoon
+-- keymap.set("n", "<C-c>", "<CMD>copen<CR>", { desc = "Open quickfix list" })
+-- keymap.set("n", "<C-q>", "<CMD>cclose<CR>", { desc = "Open quickfix list" })
 
 -- Diagnostics
 keymap.set("n", "<C-J>", function()
