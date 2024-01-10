@@ -17,18 +17,22 @@ vim.keymap.set("n", "<C-q>", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end)
 
+vim.keymap.set("n", "<C-c>", function()
+  require("harpoon.mark").clear_all()
+end)
+
 vim.keymap.set("n", "<leader>1", function()
   harpoon:list():select(1)
-end)
+end, { desc = "Harpoon select 1" })
 vim.keymap.set("n", "<leader>2", function()
   harpoon:list():select(2)
-end)
+end, { desc = "Harpoon select 2" })
 vim.keymap.set("n", "<leader>3", function()
   harpoon:list():select(3)
-end)
+end, { desc = "Harpoon select 3" })
 vim.keymap.set("n", "<leader>4", function()
   harpoon:list():select(4)
-end)
+end, { desc = "Harpoon select 4" })
 
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<C-p>", function()
@@ -44,7 +48,7 @@ keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Delete a word backward
-keymap.set("n", "dW", "dB")
+keymap.set("n", "dW", "db")
 
 -- mini.surround
 -- keymap.set("n", "<C-g>", "gs")
