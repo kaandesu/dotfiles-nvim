@@ -89,10 +89,6 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 require("oil").setup({})
 keymap.set("n", "<C-e>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
--- nvim.bqf  (quickfix list) DISABLED since I have harpoon
--- keymap.set("n", "<C-c>", "<CMD>copen<CR>", { desc = "Open quickfix list" })
--- keymap.set("n", "<C-q>", "<CMD>cclose<CR>", { desc = "Open quickfix list" })
-
 -- Diagnostics
 keymap.set("n", "<C-J>", function()
   vim.diagnostic.goto_next()
