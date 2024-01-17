@@ -80,10 +80,10 @@ keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { silent = true })
 keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { silent = true })
 
 -- Resize Window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
+keymap.set("n", "<C-w><left>", "<C-w>7<")
+keymap.set("n", "<C-w><right>", "<C-w>7>")
+keymap.set("n", "<C-w><up>", "<C-w>7+")
+keymap.set("n", "<C-w><down>", "<C-w>7-")
 
 -- Oil.nvim keymaps
 require("oil").setup({})
