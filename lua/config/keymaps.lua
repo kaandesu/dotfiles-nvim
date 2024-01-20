@@ -1,7 +1,7 @@
 -- Default keymaps: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 local discipline = require("kaandesu.discipline")
-discipline.cowboy()
+discipline.init()
 
 local harpoon = require("harpoon")
 harpoon:setup({})
