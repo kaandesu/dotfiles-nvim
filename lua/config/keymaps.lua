@@ -9,6 +9,9 @@ harpoon:setup({})
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Extra langmap for Turkish characters
+vim.api.nvim_set_option("langmap", "ü{,ğ}")
+
 -- Harpoon keymaps
 vim.keymap.set("n", "<leader>a", function()
   harpoon:list():append()
