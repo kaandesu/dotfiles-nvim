@@ -4,7 +4,7 @@ function M.cowboy()
   ---@type table?
   local id
   local ok = true
-
+  local limit = 20
   for _, key in ipairs({ "h", "j", "k", "l", "+", "-", "<Left>", "<Right>", "<Up>", "<Down>" }) do
     local count = 0
     local timer = assert(vim.loop.new_timer())
@@ -13,12 +13,12 @@ function M.cowboy()
       if vim.v.count > 0 then
         count = 0
       end
-      if count >= 10 then
+      if count >= limit then
         ok, id = pcall(vim.notify, "Hold it Cowboy!", vim.log.levels.WARN, {
           icon = "🤠",
           replace = id,
           keep = function()
-            return count >= 10
+            return count >= limit
           end,
         })
         if not ok then
