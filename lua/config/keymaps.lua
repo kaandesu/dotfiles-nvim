@@ -5,6 +5,15 @@ discipline.init()
 
 local harpoon = require("harpoon")
 harpoon:setup({})
+--
+--- Vim-apm setup
+local apm = require("vim-apm")
+apm:setup({})
+--- Toggle apm on init
+apm:toggle_monitor()
+vim.keymap.set("n", "<leader>apm", function()
+  apm:toggle_monitor()
+end)
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -98,13 +107,6 @@ keymap.set("n", "<C-e>", "<CMD>Oil --float<CR>", { desc = "Open parent directory
 keymap.set("n", "<C-J>", function()
   vim.diagnostic.goto_next()
 end, opts)
-
---- Vim-apm setup
-local apm = require("vim-apm")
-apm:setup({})
-vim.keymap.set("n", "<leader>apm", function()
-  apm:toggle_monitor()
-end)
 
 keymap.set("n", "<leader>r", function()
   require("kaandesu.utils").replaceHexWithHSL()
