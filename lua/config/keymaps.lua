@@ -21,6 +21,9 @@ local opts = { noremap = true, silent = true }
 -- Extra langmap for Turkish characters
 vim.api.nvim_set_option("langmap", "ü{,ğ}")
 
+-- Enter edit mode on lazier v
+vim.keymap.set("v", ":", ":s/")
+
 vim.keymap.set("n", "ğ", "}zz")
 vim.keymap.set("n", "ü", "{zz")
 -- Harpoon keymaps
