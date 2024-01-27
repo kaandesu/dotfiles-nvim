@@ -34,10 +34,6 @@ vim.keymap.set("n", "<C-q>", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end)
 
-vim.keymap.set("n", "<C-c>", function()
-  require("harpoon.mark").clear_all()
-end)
-
 vim.keymap.set("n", "<leader>1", function()
   harpoon:list():select(1)
 end, { desc = "Harpoon select 1" })
