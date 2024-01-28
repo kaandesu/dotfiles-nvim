@@ -17,7 +17,7 @@ return {
     "echasnovski/mini.surround",
     opts = {
       mappings = {
-        add = "<C-g>a",
+        add = "<C-g>",
         delete = "<C-g>d",
         replace = "<C-g>r",
       },
