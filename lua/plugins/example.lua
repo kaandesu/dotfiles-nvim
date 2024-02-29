@@ -56,7 +56,7 @@ return {
       -- stylua: ignore
       {
         "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root, hidden= true }) end,
         desc = "Find Plugin File",
       },
     },
@@ -146,6 +146,7 @@ return {
         "json",
         "lua",
         "markdown",
+        "c",
         "markdown_inline",
         "python",
         "query",
