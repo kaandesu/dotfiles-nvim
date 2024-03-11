@@ -1,5 +1,7 @@
 return {
-  -- tools
+  {
+    "gleam-lang/gleam.vim",
+  },
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
