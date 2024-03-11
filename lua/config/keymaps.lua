@@ -5,7 +5,7 @@ discipline.init()
 
 local harpoon = require("harpoon")
 harpoon:setup({})
---
+
 --- Vim-apm setup
 local apm = require("vim-apm")
 apm:setup({})
@@ -19,13 +19,16 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- Extra langmap for Turkish characters
-vim.api.nvim_set_option("langmap", "ü{,ğ}")
+-- vim.api.nvim_set_option("langmap", "ü{,ğ}")
 
 -- Enter edit mode on lazier v
 vim.keymap.set("v", ":", ":s/")
 
 vim.keymap.set("n", "ğ", "}zz")
 vim.keymap.set("n", "ü", "{zz")
+vim.keymap.set("v", "ğ", "}zz")
+vim.keymap.set("v", "ü", "{zz")
+
 -- Harpoon keymaps
 vim.keymap.set("n", "<leader>a", function()
   harpoon:list():append()
