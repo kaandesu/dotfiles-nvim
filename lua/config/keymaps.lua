@@ -6,6 +6,9 @@ discipline.init()
 local harpoon = require("harpoon")
 harpoon:setup({})
 
+local invalidSpace = require("kaandesu.invalid-space")
+invalidSpace.init()
+
 --- Vim-apm setup
 local apm = require("vim-apm")
 apm:setup({})
