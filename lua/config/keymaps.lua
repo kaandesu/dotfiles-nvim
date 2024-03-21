@@ -9,6 +9,9 @@ harpoon:setup({})
 local invalidSpace = require("kaandesu.invalid-space")
 invalidSpace.init()
 
+local markdownBehaviour = require("kaandesu.markdown-behaviour")
+markdownBehaviour.init()
+
 --- Vim-apm setup
 local apm = require("vim-apm")
 apm:setup({})
