@@ -33,7 +33,6 @@ vim.api.nvim_create_autocmd("FileType", {
       vim.notify("there is something wrong with the client")
       return
     end
-    vim.notify("custom lsp attached!")
     vim.lsp.buf_attach_client(0, client)
   end,
 })

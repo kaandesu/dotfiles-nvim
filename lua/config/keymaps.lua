@@ -12,6 +12,14 @@ invalidSpace.init()
 local markdownBehaviour = require("kaandesu.markdown-behaviour")
 markdownBehaviour.init()
 
+local test = function()
+  require("neo-tree.command").execute({ action = "close" })
+end
+
+vim.keymap.set("n", "ş", function()
+  test()
+end, { expr = true, silent = true })
+
 --- Vim-apm setup
 local apm = require("vim-apm")
 apm:setup({})
