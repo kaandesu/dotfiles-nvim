@@ -9,6 +9,12 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 -- Fix conceallevel for json files
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    require("neo-tree.command").execute({ action = "close" })
+  end,
+})
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "json", "jsonc", "md", "markdown" },
