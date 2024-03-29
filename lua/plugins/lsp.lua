@@ -1,12 +1,9 @@
 return {
-  {
-    "gleam-lang/gleam.vim",
-  },
-  {
-    "zeioth/garbage-day.nvim",
-    dependencies = "neovim/nvim-lspconfig",
-    event = "VeryLazy",
-  },
+  -- {
+  --   "zeioth/garbage-day.nvim",
+  --   dependencies = "neovim/nvim-lspconfig",
+  --   event = "VeryLazy",
+  -- },
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
@@ -142,5 +139,8 @@ return {
       },
       setup = {},
     },
+  },
+  {
+    "gleam-lang/gleam.vim",
   },
 }

@@ -12,6 +12,9 @@ invalidSpace.init()
 local markdownBehaviour = require("kaandesu.markdown-behaviour")
 markdownBehaviour.init()
 
+local customExit = require("kaandesu.exit-all")
+customExit.init()
+
 local test = function()
   require("neo-tree.command").execute({ action = "close" })
 end
