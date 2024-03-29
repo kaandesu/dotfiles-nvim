@@ -10,7 +10,7 @@ function M.init()
       count = 0
       return ":qa<Cr>"
     end
-    timer:start(500, 0, function()
+    timer:start(150, 0, function()
       count = 0
     end)
   end, { expr = true, silent = true })
