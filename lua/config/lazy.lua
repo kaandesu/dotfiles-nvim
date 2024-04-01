@@ -9,7 +9,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   change_detection = {
-    enabled = false,
+    enabled = true,
     notify = false,
   },
   spec = {
