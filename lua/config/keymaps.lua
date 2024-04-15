@@ -46,6 +46,8 @@ vim.keymap.set("n", "ü", "{zz")
 vim.keymap.set("v", "ğ", "}zz")
 vim.keymap.set("v", "ü", "{zz")
 
+vim.keymap.set("v", "<S-Cr>", "i<Cr><Esc>")
+
 -- Harpoon keymaps
 vim.keymap.set("n", "<leader>a", function()
   harpoon:list():append()
@@ -95,6 +97,8 @@ keymap.set("n", "<C-m>", "<C-i>", opts)
 -- Page Up / down
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+keymap.set("n", "<S-Cr>", "i<Cr><Esc>")
 
 -- New Tab
 keymap.set("n", "te", ":tabedit<Return>")
