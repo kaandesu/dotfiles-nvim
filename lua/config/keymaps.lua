@@ -50,7 +50,7 @@ vim.keymap.set("v", "<S-Cr>", "i<Cr><Esc>")
 
 -- Harpoon keymaps
 vim.keymap.set("n", "<leader>a", function()
-  harpoon:list():append()
+  harpoon:list():add()
 end, { desc = "Harpoon append" })
 vim.keymap.set("n", "<C-q>", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
