@@ -4,7 +4,7 @@ function M.init()
   ---@type table?
   local id
   local ok = true
-  local limit = 12
+  local limit = 20
   for _, key in ipairs({ "h", "j", "k", "l", "+", "-", "<Left>", "<Right>", "<Up>", "<Down>" }) do
     local count = 0
     local timer = assert(vim.loop.new_timer())
@@ -31,7 +31,7 @@ function M.init()
         timer:start(1000, 0, function()
           count = 0
         end)
-        newKey = M.autoZZ(10, key)
+        newKey = M.autoZZ(10, key, count)
         return newKey
       end
     end, { expr = true, silent = true })
@@ -42,7 +42,8 @@ local jumpTimer = assert(vim.loop.new_timer())
 ---@param  limit number
 ---@param key string
 ---@return string newKey
-function M.autoZZ(limit, key)
+function M.autoZZ(limit, key, _count)
+  local jumpAfterBy = { 5, 3 }
   local _limit = limit or 10
   local checkFor = { "j", "k", "<Up>", "<Down>" }
   local letterToCheck = key
@@ -66,7 +67,19 @@ function M.autoZZ(limit, key)
   if vim.v.count >= _limit or totalJumps >= 20 then
     return key .. "zz"
   else
-    return key
+    if _count >= jumpAfterBy[1] then
+      totalJumps = totalJumps + jumpAfterBy[2]
+      if totalJumps >= 15 then
+        return jumpAfterBy[2] .. key .. "zz"
+      end
+      return jumpAfterBy[2] .. key
+    else
+      totalJumps = totalJumps + 1
+      if totalJumps >= 15 then
+        return key .. "zz"
+      end
+      return key
+    end
   end
 end
 
