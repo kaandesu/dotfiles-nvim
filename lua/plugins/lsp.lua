@@ -20,10 +20,13 @@ return {
       })
     end,
   },
-
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
+  },
+  {
+    "mfussenegger/nvim-dap",
+    config = function() end,
   },
   {
     "gleam-lang/gleam.vim",
