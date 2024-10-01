@@ -31,4 +31,7 @@ return {
   {
     "gleam-lang/gleam.vim",
   },
+  {
+    "ziglang/zig.vim",
+  },
 }

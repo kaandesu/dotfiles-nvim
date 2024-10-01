@@ -27,7 +27,7 @@ end, { expr = true, silent = true })
 local apm = require("vim-apm")
 apm:setup({})
 --- Toggle apm on init
-apm:toggle_monitor()
+-- apm:toggle_monitor()
 vim.keymap.set("n", "<leader>apm", function()
   apm:toggle_monitor()
 end)
