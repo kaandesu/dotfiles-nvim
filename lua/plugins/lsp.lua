@@ -37,4 +37,5 @@ return {
   {
     "ziglang/zig.vim",
   },
+  { "rafamadriz/friendly-snippets", enabled = false },
 }
