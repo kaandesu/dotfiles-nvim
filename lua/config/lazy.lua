@@ -14,7 +14,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "tokyonight-storm",
+      colorscheme = "retrobox",
     } },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -43,7 +43,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "retrobox", "tokyonight", "habamax" } },
   checker = { enabled = false, notify = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -61,4 +61,4 @@ require("lazy").setup({
     },
   },
 })
-require("java").setup()
+-- require("java").setup()
