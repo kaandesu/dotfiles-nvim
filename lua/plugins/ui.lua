@@ -63,18 +63,6 @@ return {
     },
   },
 
-  -- animations
-  {
-    "echasnovski/mini.animate",
-    event = "VeryLazy",
-    enabled = false,
-    opts = function(_, opts)
-      opts.scroll = {
-        enable = false,
-      }
-    end,
-  },
-
   -- buffer line
   {
     "akinsho/bufferline.nvim",
@@ -177,4 +165,14 @@ return {
     "stevearc/oil.nvim",
   },
   { "kevinhwang91/nvim-bqf" },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      terminal = {
+        win = {
+          position = "float",
+        },
+      },
+    },
+  },
 }
