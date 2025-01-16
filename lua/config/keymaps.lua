@@ -1,5 +1,7 @@
 -- Default keymaps: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
+require("neo-tree.command").execute({ action = "close" })
+
 local harpoon = require("harpoon")
 harpoon:setup({})
 

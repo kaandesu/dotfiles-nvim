@@ -1,4 +1,5 @@
 local colorscheme = require("plugins.colorscheme")
+vim.cmd("set ma")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
