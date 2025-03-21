@@ -1,9 +1,9 @@
 return {
-  -- {
-  --   "zeioth/garbage-day.nvim",
-  --   dependencies = "neovim/nvim-lspconfig",
-  --   event = "VeryLazy",
-  -- },
+  {
+    "zeioth/garbage-day.nvim",
+    dependencies = "neovim/nvim-lspconfig",
+    event = "VeryLazy",
+  },
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
@@ -21,6 +21,7 @@ return {
     end,
   },
   -- lsp servers
+
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -32,7 +33,11 @@ return {
             },
           },
         },
-        vtsls = {},
+        vtsls = {
+          on_attach = function(client)
+            client.server_capabilities.documentFormattingProvider = false
+          end,
+        },
       },
       inlay_hints = { enabled = false },
     },
