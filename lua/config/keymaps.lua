@@ -47,6 +47,10 @@ vim.keymap.set("n", "ü", "{zz")
 vim.keymap.set("v", "ğ", "}zz")
 vim.keymap.set("v", "ü", "{zz")
 
+vim.cmd("cabbrev W w")
+vim.cmd("cabbrev Wq wq")
+vim.cmd("cabbrev WQ wq")
+
 vim.keymap.set("v", "<S-Cr>", "i<Cr><Esc>")
 
 -- Harpoon keymaps

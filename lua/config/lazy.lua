@@ -14,9 +14,14 @@ require("lazy").setup({
   },
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "retrobox",
-    } },
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+      opts = {
+        -- colorscheme = "tokyonight-storm",
+        colorscheme = "retrobox",
+      },
+    },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
